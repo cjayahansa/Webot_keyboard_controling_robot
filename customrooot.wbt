@@ -1,0 +1,172 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5366609341435598 0.6794437740347326 0.5003510764349378 2.012259218962607
+  position 0.03745290400947423 0.032255322029442236 0.36519091036255
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Robot {
+  translation -0.004431567062368515 0.057534333140032874 0.013589876593112738
+  rotation 0.7999064174129589 0.5989797246567313 -0.03705418777562483 -3.0419918135963444
+  children [
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -7.578237613530684
+        axis 0 1 0
+        anchor 0.02 -0.03 -5.5743e-05
+      }
+      device [
+        RotationalMotor {
+          name "motor1"
+        }
+      ]
+      endPoint Solid {
+        translation 0.0200462 0.03 -6.87516e-05
+        rotation -0.6828021210348136 0.5168202433091132 -0.5164088492815249 4.340514989793667
+        children [
+          DEF weel2 Shape {
+            appearance PBRAppearance {
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.005
+              radius 0.0173
+            }
+          }
+        ]
+        name "solid(3)"
+        boundingObject USE weel2
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -41.536337391734456
+        axis 0 1 0
+        anchor -0.0200141 -0.0299406 1.0994e-06
+      }
+      device [
+        RotationalMotor {
+          name "motor2"
+        }
+      ]
+      endPoint Solid {
+        translation -0.0202523 0.0300587 -0.000143847
+        rotation 0.24677392848307908 0.6848993346653613 -0.6855767860684706 2.651434770170152
+        children [
+          DEF weel Shape {
+            appearance PBRAppearance {
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.005
+              radius 0.0167
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE weel
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -7.578237613530684
+        axis 0 1 0
+        anchor 0.02 -0.03 -5.5743e-05
+      }
+      device [
+        RotationalMotor {
+          name "motor3"
+        }
+      ]
+      endPoint Solid {
+        translation 0.02 -0.03 -5.5743e-05
+        rotation -0.6828021210348136 0.5168202433091132 -0.5164088492815249 4.340514989793667
+        children [
+          DEF weel2 Shape {
+            appearance PBRAppearance {
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.005
+              radius 0.0173
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE weel2
+        physics Physics {
+        }
+        linearVelocity 0.014454760157721415 0.049903387131253425 8.7863234630782e-07
+        angularVelocity -2.859770862078325 0.8281625367002934 0.19535657273785903
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -41.536337391734456
+        axis 0 1 0
+        anchor -0.0200141 -0.0299406 1.0994e-06
+      }
+      device [
+        RotationalMotor {
+          name "motor4"
+        }
+      ]
+      endPoint Solid {
+        translation -0.020013464917364228 -0.02994067428046852 2.0853896517061597e-06
+        rotation 0.24677392848307908 0.6848993346653613 -0.6855767860684706 2.651434770170152
+        children [
+          DEF weel Shape {
+            appearance PBRAppearance {
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.005
+              radius 0.0167
+            }
+          }
+        ]
+        boundingObject USE weel
+        physics Physics {
+        }
+        linearVelocity 0.007790760010763048 0.05182285708865606 -1.20884247087355e-06
+        angularVelocity -2.8597709544808447 0.8281625593994053 0.19535656380081212
+      }
+    }
+    DEF body Shape {
+      appearance PBRAppearance {
+        baseColor 0 0.3 1
+        roughness 1
+        metalness 0
+        name "body"
+      }
+      geometry Box {
+        size 0.1 0.06 0.02
+      }
+    }
+  ]
+  boundingObject USE body
+  physics Physics {
+  }
+  controller "keyboardController"
+  linearVelocity 0.009689670690396569 0.04591438113115637 4.250247328011878e-07
+  angularVelocity 4.1539948815820776e-06 1.4748092071020582e-05 -0.17329744264519342
+}
